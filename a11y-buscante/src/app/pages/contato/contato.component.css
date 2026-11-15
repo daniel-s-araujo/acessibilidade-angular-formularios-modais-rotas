@@ -71,7 +71,7 @@ fieldset {
   box-sizing: border-box;
 }
 
- .radio-button {
+.radio-button {
   list-style-type: none;
   display: flex;
   gap: 24px;
@@ -87,7 +87,9 @@ fieldset {
   margin-right: 8px;
 }
 
-textarea:focus, input:focus, select:focus{
+textarea:focus,
+input:focus,
+select:focus {
   outline: none;
 }
 
@@ -96,7 +98,8 @@ select option:disabled {
   cursor: not-allowed;
 }
 
-input::placeholder, textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
   font-size: 16px;
   font-family: Poppins;
   padding-left: 8px;
@@ -166,11 +169,8 @@ input::placeholder, textarea::placeholder{
   border: 1px solid red;
 }
 
-.contato-botoes .botao-enviar:disabled {
+.contato-botoes .botao-enviar[aria-disabled] {
   background-color: #ccc;
   color: #666;
   cursor: not-allowed;
 }
-
-
-

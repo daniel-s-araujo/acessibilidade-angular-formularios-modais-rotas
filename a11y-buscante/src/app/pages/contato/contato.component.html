@@ -92,7 +92,7 @@
     <div class="contato-botoes">
       <button type="button" class="botao-cancelar" (click)="cancelar()">Cancelar
       </button>
-      <button type="submit" [disabled]="contatoForm.invalid" class="botao-enviar">Enviar
+      <button [attr.aria-disabled]="contatoForm.invalid" type="submit" class="botao-enviar">Enviar
       </button>
     </div>
   </form>
