@@ -13,7 +13,8 @@
     <fieldset>
       <div class="campo-form">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" placeholder="Digite seu nome completo" formControlName="nome" required>
+        <input [attr.aria-invalid]="contatoForm.get('nome')?.invalid" type="text" id="nome"
+          placeholder="Digite seu nome completo" formControlName="nome" required>
         @if (contatoForm.get('nome')?.errors?.['required']) {
         <span id="nome-erro" class="erro-mensagem">Nome obrigatório
         </span>
@@ -22,7 +23,8 @@
 
       <div class="campo-form">
         <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Digite seu email" formControlName="email" required>
+        <input [attr.aria-invalid]="contatoForm.get('email')?.invalid" type="email" id="email"
+          placeholder="Digite seu email" formControlName="email" required>
         @if (contatoForm.get('email')?.errors?.['email']) {
         <span id="email-erro-email" class="erro-mensagem">Formato de e-mail inválido
         </span>
@@ -77,7 +79,8 @@
     <fieldset>
       <div class="campo-form">
         <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" placeholder="Digite sua mensagem" formControlName="mensagem" required></textarea>
+        <textarea [attr.aria-invalid]="contatoForm.get('mensagem')?.invalid" id="mensagem"
+          placeholder="Digite sua mensagem" formControlName="mensagem" required></textarea>
         @if (contatoForm.get('mensagem')?.errors?.['required']) {
         <span id="mensagem-erro" class="erro-mensagem">Mensagem obrigatória
         </span>
